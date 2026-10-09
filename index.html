@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ec">
+    <title>Daymark | Daily Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="crud.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Daymark home"><span class="wordmark-mark">D</span> DAYMARK</a>
+      <span class="topbar-note">A PERSONAL TASK BOARD</span>
+    </header>
+
+    <main class="page-layout">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR DAY, IN FOCUS</p>
+        <h1 id="page-title">Make room for<br><em>what matters.</em></h1>
+        <p class="intro-copy">A little clarity goes a long way. Put your next step here.</p>
+        <span class="sun-mark" aria-hidden="true">🌸</span>
+      </section>
+
+      <section class="task-panel" aria-labelledby="tasks-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE LIST</p>
+            <h2 id="tasks-heading">My tasks</h2>
+          </div>
+          <p class="task-count" id="task-count" aria-live="polite"></p>
+        </div>
+
+        <form class="task-form" id="task-form">
+          <label class="visually-hidden" for="task-input">New task</label>
+          <input id="task-input" name="title" type="text" placeholder="Add something to your list..." autocomplete="off" required>
+          <button type="submit">Add task <span aria-hidden="true">+</span></button>
+        </form>
+        <p class="task-message" id="task-message" role="alert"></p>
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        <p class="storage-note"><span aria-hidden="true">●</span> Saved in this browser</p>
+      </section>
+    </main>
+
+    <footer class="page-footer"><span>DAYMARK / 01</span><span>ONE THING AT A TIME</span></footer>
+  </body>
+</html>
